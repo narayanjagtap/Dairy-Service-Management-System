@@ -32,7 +32,6 @@ This project represents a **real-world dairy workflow** with clean role separati
 - View request status & history
 - View bills (paid / unpaid)
 - See total outstanding amount
-- Contact admin (phone / WhatsApp – frontend only)
 
 ### 🛠️ Admin
 - Login (separate role)
