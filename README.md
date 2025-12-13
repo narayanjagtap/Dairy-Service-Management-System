@@ -4,7 +4,6 @@ A full-stack web application to manage daily milk requests, billing between cust
 
 This project represents a **real-world dairy workflow** with clean role separation, simple authentication, and manual billing logic used in many small dairy businesses.
 
----
 
 ## 🚀 Tech Stack
 
@@ -23,7 +22,7 @@ This project represents a **real-world dairy workflow** with clean role separati
 
 ### Authentication
 - Custom session-based login (kept simple for learning)
----
+
 
 ## 👥 User Roles
 
@@ -43,7 +42,7 @@ This project represents a **real-world dairy workflow** with clean role separati
 - Mark bills as Paid / Unpaid
 - View dashboard reports
 
----
+
 
 ## 📌 Key Features
 
@@ -55,7 +54,7 @@ This project represents a **real-world dairy workflow** with clean role separati
 - REST API based architecture
 - Clean and simple UI
 
----
+
 
 ## 🗂️ Project Modules
 
@@ -74,7 +73,7 @@ This project represents a **real-world dairy workflow** with clean role separati
 - Bills List
 - Customers List
 
----
+
 
 ## 🖼️ Screenshots
 
