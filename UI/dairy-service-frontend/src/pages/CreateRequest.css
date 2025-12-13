@@ -1,0 +1,38 @@
+.create-request-form {
+  max-width: 600px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background-color: #95a5a6;
+}
