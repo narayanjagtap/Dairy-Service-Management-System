@@ -21,5 +21,6 @@ jobs:
         cache: maven
         
     - name: Build with Maven
-      # This points to your specific folder and skips database tests
-      run: mvn -B package --file smart-farming-advisory/pom.xml -DskipTests
+      # This points directly to your 'dairy-service-management' folder
+      # -DskipTests prevents database connection errors
+      run: mvn -B package --file dairy-service-management/pom.xml -DskipTests
