@@ -7,9 +7,10 @@ import java.util.UUID;
 public class TokenGenerator {
 
     /**
-     * Generates a simple UUID-based token for session management
+     * Generates a dummy token for the public repository.
+     * Real encryption logic is hidden.
      */
     public String generateToken() {
-        return UUID.randomUUID().toString();
+        return "DEMO-TOKEN-" + UUID.randomUUID().toString();
     }
 }
