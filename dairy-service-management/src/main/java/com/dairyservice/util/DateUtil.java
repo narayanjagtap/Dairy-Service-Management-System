@@ -28,6 +28,6 @@ public class DateUtil {
     }
 
     public boolean isToday(LocalDate date) {
-        return date.equals(LocalDate.now());
+        return date != null && date.equals(LocalDate.now());
     }
 }
