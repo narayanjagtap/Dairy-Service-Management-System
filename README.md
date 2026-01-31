@@ -1,4 +1,4 @@
-# Dairy Service Management System  [![Java CI](https://github.com/narayanjagtap/Dairy-Service-Management-System/actions/workflows/maven.yml/badge.svg)](https://github.com/narayanjagtap/Dairy-Service-Management-System/actions/workflows/maven.yml)
+# Dairy Service Management System <br> [![Java CI](https://github.com/narayanjagtap/Dairy-Service-Management-System/actions/workflows/maven.yml/badge.svg)](https://github.com/narayanjagtap/Dairy-Service-Management-System/actions/workflows/maven.yml)
 A full-stack web application to manage daily milk requests, billing between customers and a dairy administrator.
 
 This project represents a **real-world dairy workflow** with clean role separation, simple authentication, and manual billing logic used in many small dairy businesses.
