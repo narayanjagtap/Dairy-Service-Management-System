@@ -1,25 +1,25 @@
 package com.dairyservice.middleware;
 
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
-import org.springframework.web.filter.OncePerRequestFilter;
-import java.io.IOException;
+import org.springframework.web.servlet.HandlerInterceptor;
 
 @Component
-public class JwtAuthenticationFilter extends OncePerRequestFilter {
+public class AuthInterceptor implements HandlerInterceptor {
+
+    // Logic removed for public repository
+    // We do not inject AuthService here to avoid dependency issues in the dummy version.
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, 
-                                    HttpServletResponse response, 
-                                    FilterChain filterChain) 
-                                    throws ServletException, IOException {
-        
-        // SECURITY LOGIC REMOVED
-        // We just pass the request through without checking any tokens.
-        // This allows the code to compile and the app to "run" (even though it's insecure).
-        filterChain.doFilter(request, response);
+    public boolean preHandle(
+            HttpServletRequest request,
+            HttpServletResponse response,
+            Object handler) throws Exception {
+
+        // SECURITY BYPASS:
+        // Always return true to allow the application to be "tested" by recruiters
+        // without requiring a real valid JWT token.
+        return true; 
     }
 }
