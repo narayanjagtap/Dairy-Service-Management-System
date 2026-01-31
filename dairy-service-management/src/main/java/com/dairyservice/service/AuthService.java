@@ -46,7 +46,26 @@ public class AuthService {
     public LoginResponse login(LoginRequest request) {
         Optional<User> userOpt = userRepository.findByEmail(request.getEmail());
 
-       
+        if (userOpt.isEmpty()) {
+            return new LoginResponse(null, null, null, null, null, "User not found");
+        }
+
+        User user = userOpt.get();
+
+        // Validate password (plain text comparison)
+        if (!user.getPassword().equals(request.getPassword())) {
+            return new LoginResponse(null, null, null, null, null, "Invalid password");
+        }
+
+        // Delete existing session if any
+        sessionRepository.deleteByUserId(user.getId());
+
+        // Create new session
+        String token = tokenGenerator.generateToken();
+        Session session = new Session();
+        session.setUserId(user.getId());
+        session.setToken(token);
+        sessionRepository.save(session);
 
         return new LoginResponse(
                 token,

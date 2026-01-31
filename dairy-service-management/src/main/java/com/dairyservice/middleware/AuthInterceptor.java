@@ -28,7 +28,18 @@ public class AuthInterceptor implements HandlerInterceptor {
 
         String authHeader = request.getHeader("Authorization");
 
-        
+        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.getWriter().write("{\"success\": false, \"message\": \"Missing or invalid token\"}");
+            return false;
+        }
+
+        String token = authHeader.substring(7);
+        if (authService.validateToken(token) == null) {
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.getWriter().write("{\"success\": false, \"message\": \"Invalid token\"}");
+            return false;
+        }
 
         return true;
     }
